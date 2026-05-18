@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { loadRepo, sendMessage } from "./api";
-import CodePreview from "./CodePreview";
+import CodePreview from "./Codepreview";
 
 /* ── Logo SVG ───────────────────────────────────────────────────────────── */
 function Logo({ size = 32 }) {
