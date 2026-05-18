@@ -15,7 +15,6 @@ def fetch_repo_files(repo_url: str, token: str = None):
     if token:
         headers["Authorization"] = f"token {token}"
 
-    # Get full file tree
     api = f"https://api.github.com/repos/{owner}/{repo}/git/trees/HEAD?recursive=1"
     response = requests.get(api, headers=headers)
     response.raise_for_status()

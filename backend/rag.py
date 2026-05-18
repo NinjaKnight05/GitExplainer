@@ -25,15 +25,13 @@ def init_pinecone_index():
     if INDEX_NAME not in existing:
         pc.create_index(
             name=INDEX_NAME,
-            dimension=384,  # ← fix this, MiniLM = 384 not 1536
+            dimension=384,  
             metric="cosine",
             spec=ServerlessSpec(
                 cloud="aws",
                 region=os.getenv("PINECONE_REGION", "us-east-1")
             )
         )
-
-# rest of the file stays exactly the same
 
 
 def repo_namespace(repo_url: str) -> str:
