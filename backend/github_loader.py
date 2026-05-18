@@ -1,11 +1,12 @@
 import requests
-
+import os
 ALLOWED_EXTENSIONS = (
     ".py", ".js", ".ts", ".jsx", ".tsx",
     ".md", ".json", ".html", ".css", ".env.example"
 )
 
 def fetch_repo_files(repo_url: str, token: str = None):
+    token = token or os.getenv("GITHUB_TOKEN")
     """Fetch all code files from a GitHub repo."""
     parts = repo_url.rstrip("/").split("/")
     owner, repo = parts[-2], parts[-1]
