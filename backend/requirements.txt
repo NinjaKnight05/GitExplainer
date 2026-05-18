@@ -10,3 +10,4 @@ pinecone
 huggingface-hub
 requests
 python-dotenv
+groq
