@@ -1,7 +1,7 @@
 fastapi
 uvicorn
 langchain==0.3.25
-langchain-pinecone==0.2.13
+langchain-pinecone==0.0.1
 langchain-huggingface
 langchain-community==0.3.24
 langchain-text-splitters
